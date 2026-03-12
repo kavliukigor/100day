@@ -1,0 +1,15 @@
+html{
+    background:black;
+}
+.container{
+    width:80%;
+    margin-left:10%;
+    color: white;
+    text-align: center;
+    font-family: 'Libre Baskerville',serif;
+}
+img{
+    width:100%;
+    border: 5px solid white;
+    
+}
