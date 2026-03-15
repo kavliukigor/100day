@@ -2,8 +2,11 @@ import pandas
 import datetime as dt
 import random
 import smtplib
-my_email='kavliukigor@gmail.com'
-password='ozmqgaefmqscamuz'
+import os
+from dotenv import load_dotenv
+load_dotenv()
+my_email=os.getenv('my_email')
+password=os.getenv('password')
 
 data=pandas.read_csv('day32/birthdays.csv')
 info={row['name']:{'email':row['email'],'year':row['year'],'month':row['month'],'day':row['day']} for(index,row)in data.iterrows()}
