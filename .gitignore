@@ -2,3 +2,5 @@
 **/.env
 chrome_profile
 **/chrome_profile
+.vscode
+**/.vscode
