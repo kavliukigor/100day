@@ -62,7 +62,7 @@ def add():
                 return render_template('add.html', form=form, error="Book already at bookshelf")
         return redirect(url_for('home'))
 
-@app.route('/edit<int:id>', methods=['GET','POST'])
+@app.route('/edit/<int:id>', methods=['GET','POST'])
 def edit(id):
     book=db.get_or_404(Book, id)
     form=EditRating()
@@ -75,7 +75,7 @@ def edit(id):
             db.session.commit()
             return redirect(url_for('home'))
 
-@app.route('/delete<int:id>',methods=['GET','POST'])
+@app.route('/delete/<int:id>',methods=['GET','POST'])
 def delete(id):
     book=db.get_or_404(Book, id)
     if request.method=='GET':
